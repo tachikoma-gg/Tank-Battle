@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private float healthMax;
+    private float healthCurrent;
+
+    // Explosion particle system
+
     void Start()
     {
-        
+        healthCurrent = healthMax;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float damage)
     {
-        
+        healthCurrent -= damage;
+
+        if(healthCurrent <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

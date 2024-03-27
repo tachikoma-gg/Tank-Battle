@@ -8,6 +8,10 @@ public class MissVoTankBot : MonoBehaviour
 
     [SerializeField] private float throttle;
     [SerializeField] private float steering;
+    [SerializeField] private float launchForce;
+    [SerializeField] private bool fire;
+
+    [SerializeField] private Vector3 aimInput;
 
     void Start()
     {
@@ -18,5 +22,12 @@ public class MissVoTankBot : MonoBehaviour
     {
         controller.MoveTank(throttle);
         controller.RotateTank(steering);
+        controller.AimTank(aimInput);
+
+        if(fire)
+        {
+            controller.FireWeapon(launchForce);
+            fire = false;
+        }
     }
 }

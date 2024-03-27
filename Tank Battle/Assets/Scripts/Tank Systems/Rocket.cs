@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody rocketRb;
+    private float launchForce;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        launchForce = GetComponentInParent<TankController>().launchForce;
+        rocketRb = GetComponent<Rigidbody>();
+        rocketRb.AddForce(transform.forward * launchForce, ForceMode.Impulse);
     }
 }
