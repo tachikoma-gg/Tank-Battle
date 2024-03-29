@@ -14,11 +14,8 @@ public class Damage : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("hit");
-
         if(collision.gameObject.CompareTag("Tank"))
         {
-            Debug.Log("hit tank");
             collision.gameObject.GetComponent<HitDetect>().TakeDamage(damage);
         }
 

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8178148214430699911}
   - component: {fileID: 6997114340650684546}
   - component: {fileID: 2508038026745103803}
+  - component: {fileID: 2620716834786629492}
   m_Layer: 0
   m_Name: TankFree_Wheel_b_right
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2620716834786629492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209790198984812658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f36526289a9d2649bf69d5b90ffc966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationDirection: -1
 --- !u!1 &1224294148611609008
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,9 +108,10 @@ GameObject:
   - component: {fileID: 1628175452894532760}
   - component: {fileID: 5891752757812242035}
   - component: {fileID: 907829760397863300}
+  - component: {fileID: 7368271328944184439}
   m_Layer: 0
   m_Name: TankFree_Wheel_f_right
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,6 +181,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7368271328944184439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224294148611609008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f36526289a9d2649bf69d5b90ffc966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationDirection: -1
 --- !u!1 &2813984903029071551
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,9 +205,10 @@ GameObject:
   - component: {fileID: 7275665594841868278}
   - component: {fileID: 4077532963559642859}
   - component: {fileID: 5399563179797000102}
+  - component: {fileID: 728236807896851326}
   m_Layer: 0
   m_Name: TankFree_Wheel_f_left
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,6 +278,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &728236807896851326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2813984903029071551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f36526289a9d2649bf69d5b90ffc966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationDirection: 1
 --- !u!1 &3197564239344523541
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +306,7 @@ GameObject:
   - component: {fileID: 6664744215079619971}
   m_Layer: 0
   m_Name: TankFree_Canon
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,14 +319,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3197564239344523541}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.01836929, y: -0.000000029802326, z: 4.6566134e-10, w: 0.9998313}
   m_LocalPosition: {x: 0, y: 0.283638, z: 0.7371832}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5123382785144914787}
   m_Father: {fileID: 3402629025156137850}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -2.105, y: 0, z: 0}
 --- !u!33 &3951128989157853919
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -385,7 +427,7 @@ GameObject:
   - component: {fileID: 8887472405734363408}
   m_Layer: 0
   m_Name: TankFree_Tower
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,14 +440,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3534306969681631548}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.410525, z: -0, w: 0.9118494}
   m_LocalPosition: {x: 0, y: 0.50000006, z: -0.08876333}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1927227640916523969}
   m_Father: {fileID: 256022853892707428}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 48.476, z: 0}
 --- !u!33 &6343413010646560962
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -726,7 +768,7 @@ GameObject:
   - component: {fileID: 5123382785144914787}
   m_Layer: 0
   m_Name: Firing Point
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -757,7 +799,7 @@ GameObject:
   - component: {fileID: 4540800489929490153}
   m_Layer: 0
   m_Name: Eyes
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,9 +830,10 @@ GameObject:
   - component: {fileID: 6626659013389283599}
   - component: {fileID: 3278003246790772458}
   - component: {fileID: 3956718071114314948}
+  - component: {fileID: 5541568744649841988}
   m_Layer: 0
   m_Name: TankFree_Wheel_b_left
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -860,3 +903,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5541568744649841988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8759788253306404510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f36526289a9d2649bf69d5b90ffc966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationDirection: 1

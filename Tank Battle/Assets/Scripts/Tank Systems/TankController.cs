@@ -12,7 +12,7 @@ public class TankController : MonoBehaviour
     [Header("Movement")]
     private CharacterController controller;
 
-    private readonly float speed = 15;
+    private readonly float speed = 5;
     private readonly float rotateSpeed = 30;
 
     private Vector3 velocity;
@@ -80,10 +80,10 @@ public class TankController : MonoBehaviour
 
     public void RotateTank(float _rotate)
     {
-        _input.x = Mathf.Abs(_rotate) <= 1 ? _input.x + Time.deltaTime * rotateSpeed * _rotate : _input.x + Time.deltaTime * rotateSpeed * _rotate / Mathf.Abs(_rotate);
-        _input.x = Mathf.Abs(_input.x) >= 360 ? _input.x - 360 * _input.x / Mathf.Abs(_input.x) : _input.x;
+        _input.x = Mathf.Abs(_rotate) <= 1 ? Time.deltaTime * rotateSpeed * _rotate : Time.deltaTime * rotateSpeed * _rotate / Mathf.Abs(_rotate);
+        _input.x = Mathf.Abs(_input.x) >= 360 ? - 360 * _input.x / Mathf.Abs(_input.x) : _input.x;
 
-        transform.rotation = Quaternion.AngleAxis(_input.x, Vector3.up);
+        transform.rotation = Quaternion.AngleAxis(transform.eulerAngles.y + _input.x, Vector3.up);
     }
 
     public void AimTank(Vector3 _aimInput)
