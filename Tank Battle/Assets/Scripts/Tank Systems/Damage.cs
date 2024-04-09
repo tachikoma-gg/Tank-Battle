@@ -20,5 +20,6 @@ public class Damage : MonoBehaviour
         }
 
         Destroy(gameObject);
+        // Explosion on impact
     }
 }

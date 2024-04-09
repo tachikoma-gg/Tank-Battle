@@ -6,12 +6,22 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float healthMax;
     private float healthCurrent;
-
-    // Explosion particle system
+    public float healthPercentage
+    {
+        get
+        {
+            return healthCurrent/healthMax;
+        }
+    }
 
     void Start()
     {
         healthCurrent = healthMax;
+    }
+
+    void Update()
+    {
+        Debug.Log(healthPercentage);
     }
 
     public void TakeDamage(float damage)
@@ -20,7 +30,14 @@ public class Health : MonoBehaviour
 
         if(healthCurrent <= 0)
         {
-            Destroy(gameObject);
+            Death();
         }
+    }
+
+    private void Death()
+    {
+        // Explosion particle system
+        // Recolor to scorched color
+        Destroy(gameObject);
     }
 }
