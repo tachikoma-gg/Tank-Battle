@@ -5,23 +5,22 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float healthMax;
-    private float healthCurrent;
+    [SerializeField] private float healthCurrent;
+
+    private float _healthPercentage;
     public float healthPercentage
     {
         get
         {
-            return healthCurrent/healthMax;
+            _healthPercentage = healthCurrent / healthMax;
+            _healthPercentage = Mathf.Clamp(_healthPercentage, 0, 1);
+            return _healthPercentage;
         }
     }
 
     void Start()
     {
         healthCurrent = healthMax;
-    }
-
-    void Update()
-    {
-        Debug.Log(healthPercentage);
     }
 
     public void TakeDamage(float damage)
