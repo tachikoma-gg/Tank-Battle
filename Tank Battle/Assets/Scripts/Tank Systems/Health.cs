@@ -8,12 +8,10 @@ public class Health : MonoBehaviour
     [SerializeField] private float healthCurrent;
 
     private float _healthPercentage;
-    public float healthPercentage
+    public float HealthPercentage
     {
         get
         {
-            _healthPercentage = healthCurrent / healthMax;
-            _healthPercentage = Mathf.Clamp(_healthPercentage, 0, 1);
             return _healthPercentage;
         }
     }
@@ -38,5 +36,11 @@ public class Health : MonoBehaviour
         // Explosion particle system
         // Recolor to scorched color
         Destroy(gameObject);
+    }
+
+    void Update()
+    {
+        _healthPercentage = healthCurrent / healthMax;
+        _healthPercentage = Mathf.Clamp(_healthPercentage, 0, 1);
     }
 }

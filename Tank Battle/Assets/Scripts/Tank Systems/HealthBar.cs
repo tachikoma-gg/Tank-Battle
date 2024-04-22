@@ -23,7 +23,7 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        float x = width * health.healthPercentage;
+        float x = width * health.HealthPercentage;
         float y = height;
 
         Vector2 healthBarSize = new(x, y);
