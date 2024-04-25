@@ -37,7 +37,7 @@ public class TankController : MonoBehaviour
 
     [Header("Weapons")]
     private bool armed = true;
-    private readonly float launchForceMax = 50;
+    
 
     [SerializeField] private float cooldown;
     [SerializeField] private GameObject shellPrefab;
@@ -97,23 +97,6 @@ public class TankController : MonoBehaviour
         cannon.transform.rotation = Quaternion.Euler(0, turret.transform.eulerAngles.y, 0) * Quaternion.AngleAxis(aimDirection.x, Vector3.left);
     }
 
-    public void FireWeapon(float _force)
-    {
-        _launchForce = _force;
-        _launchForce = Mathf.Clamp(_launchForce, 0, launchForceMax);
-
-        if(armed)
-        {
-            armed = false;
-            GameObject shell = Instantiate(shellPrefab, firingPoint.transform.position, cannon.transform.rotation);
-            shell.transform.SetParent(transform);
-            StartCoroutine(Cooldown());
-        }
-    }
-
-    IEnumerator Cooldown()
-    {
-        yield return new WaitForSeconds(cooldown);
-        armed = true;
-    }
+    public delegate void FireWeapon();
+    public event FireWeapon FireWeaponEvent;
 }
