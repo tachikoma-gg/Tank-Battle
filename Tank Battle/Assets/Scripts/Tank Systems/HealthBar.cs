@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Health health;
+
     private RectTransform healthBar;
 
     private float width;
@@ -23,7 +22,7 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        float x = width * health.HealthPercentage;
+        float x = width * health.healthPercentage;
         float y = height;
 
         Vector2 healthBarSize = new(x, y);

@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private float healthMax;
-    [SerializeField] private float healthCurrent;
+    
+    private float healthCurrent;
 
     private float _healthPercentage;
-    public float HealthPercentage
+    public float healthPercentage
     {
         get
         {
